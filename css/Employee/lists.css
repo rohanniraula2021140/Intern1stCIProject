@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+td {
+	font-family: Raleway;
+
+}
+
+/*style for table*/
+h1 {
+	font-family: sans-serif;
+	font-size: 2em;
+	margin-bottom: 0;
+}
+table {
+	font-family: sans-serif;
+}
+table th, table td {
+	padding: 0.25em 0.5em;
+	text-align: left;
+}
+table th:nth-child(2), table td:nth-child(2) {
+	text-align: right;
+}
+table td {
+	background-color: #eee;
+}
+table th {
+	background-color: #009;
+	color: #fff;
+}
+.zigzag {
+	border-collapse: separate;
+	border-spacing: 0.25em 1em;
+}
+.zigzag tbody tr:nth-child(odd) {
+	transform: rotate(2deg);
+}
+.zigzag thead tr, .zigzag tbody tr:nth-child(even) {
+	transform: rotate(-2deg);
+}
+
+/*style for Top Heading I am Rohan Niraula*/
+body {
+
+	background-color: #131417;
+}
+p {
+	text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
+}
+.container {
+	color: #e5e5e5;
+	font-size: 2.26rem;
+	text-transform: uppercase;
+	height: 10vh;
+	font-family:'Roboto';
+	background-color: #131417;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.animation {
+	height:50px;
+	overflow:hidden;
+	margin-left: 1rem;
+}
+
+.animation > div > div {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	height:2.81rem;
+	margin-bottom: 2.81rem;
+	display:inline-block;
+}
+
+.animation div:first-child {
+	animation: text-animation 8s infinite;
+}
+
+.first div {
+	background-color:#20a7d8;
+}
+.second div {
+	background-color:#CD921E;
+}
+.third div {
+	background-color:#c10528;
+}
+
+@keyframes text-animation {
+	0% {margin-top: 0;}
+	10% {margin-top: 0;}
+	20% {margin-top: -1.862rem;}
+	30% {margin-top: -1.862rem;}
+	40% {margin-top: -2.8rem;}
+	60% {margin-top: -2.8rem;}
+	70% {margin-top: -1.862rem;}
+	80% {margin-top: -1.862rem;}
+	90% {margin-top: 0;}
+	100% {margin-top: 0;}
+}
+
+
+/*Style for Employee Management System*/
+:root {
+	/*--background-color: black;*/
+	--text-color: hsl(0, 0%, 100%);
+}
+.wrapper {
+	display: grid;
+	place-content: center;
+	background-color: var(--background-color);
+	min-height: 10vh;
+	font-family: "Oswald", sans-serif;
+	font-size: clamp(0.15rem, 0.1rem + 18vw, 4.5rem);
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--text-color);
+}
+
+.wrapper > div {
+	grid-area: 1/1/-1/-1;
+}
+.top {
+	clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+}
+.bottom {
+	clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+	color: transparent;
+	background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+	background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	transform: translateX(-0.02em);
+}
+
+
+/*style for under line*/
+
+.underlined {
+	/*   background: red; */
+	color: hsl(0 0% 98%);
+	position: relative;
+}
+
+.underline-mask:after {
+	content: '';
+	position: absolute;
+	top: 95%;
+	width: 150%;
+	aspect-ratio: 3 / 1;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 50%;
+	border: 6px solid hsl(280 80% 50%);
+	/* Use a conic gradient mask to hide and show the bits you want */
+	--spread: 140deg;
+	--start: 290deg;
+	mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+}
+
+
+.underline-overflow {
+	display: inline-block;
+	/* A little extra padding and overflow hidden   */
+	overflow: hidden;
+	padding-bottom: clamp(1rem, 2vmin, 2rem);
+}
+.underline-overflow:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	height: 150%;
+	aspect-ratio: 2.5 / 1;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	border-radius: 50%;
+	border: 6px solid hsl(10 80% 50%);
+}
+
+.underline-clip:after {
+	content: '';
+	position: absolute;
+	top: 95%;
+	width: 150%;
+	aspect-ratio: 3 / 1;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 50%;
+	border: 6px solid hsl(130 80% 50%);
+	/* Use a clip-path to hide and show the bits you want */
+	clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+
+
+/*Closable card*/
+
+.close-icon {
+	cursor: pointer;
+}
+
